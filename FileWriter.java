@@ -11,8 +11,8 @@ public class FileWriter
             fichero = new FileWriter("c:/prueba.txt");
             pw = new PrintWriter(fichero);
  
-            for (int i = 0; i < 10; i++)
-                pw.println("Linea " + i);
+            //for (int i = 0; i < 10; i++)
+                //pw.println("Linea " + i);
  
         } catch (Exception e) {
             e.printStackTrace();
