@@ -16,8 +16,11 @@ public class Materia {
 		cred_teo_mat = matTeoricos;
 		cred_prac_mat = matPracticos;
 	}
-	
-	public Materia get_Materia_By_Codigo(String codigo){
-		
-	}
+
+    public String presentarMateria(){
+        System.out.println("**************************************\n");
+        System.out.println(codigo_mat + " -" + nombre_mat + "\n");
+        System.out.println("Descripcion: "+ descripcion_mat + "\n");
+        System.out.println("Creditos -> teo: "+ cred_teo_mat + "pract: " + cred_prac_mat+ ".\n");
+    }
 }

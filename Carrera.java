@@ -1,5 +1,3 @@
-import java.io.*;
-
 public class Carrera {
 	private String codigo_carr;
 	private String nombre_carr;
@@ -30,25 +28,9 @@ public class Carrera {
         return estudiantes_carr;
     }
     
-    public void cargarCarrera(Carrera c) throws Exception
+    public String presentarCarrera()
     {
-        
-        File f = new File("d:\\"+codigo_carr+".sol");
-        if(f.exists()) {
-            FileInputStream fis=new FileInputStream(f);
-            ObjectInputStream ois=new ObjectInputStream(fis);
-            c =(Carrera)ois.readObject(); //cargamos el archivo al objeto Carrera
-            fis.close();
-            ois.close();
-        }
-        Else
-        {
-            f.createNewFile();
-        }
+        System.out.println("**************************************\n");
+        System.out.println(codigo_carr + " - " + carrNombre + " - " + carrUnidad + "\n");
     }
-    
-    public void insertarCarrera
-    
-    
-    
 }
