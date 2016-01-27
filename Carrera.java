@@ -15,8 +15,16 @@ public class Carrera {
 		estudiantes_carr = carrNestudiantes;
 	}
 	
-	public Materia get_Materia_By_Codigo(String codigo){
-		//Buscar Materia por Codigo.
-		
-	}
+    public String getCodigo_carr(){
+        return codigo_carr;
+    }
+    public String getNombre_carr(){
+        return nombre_carr;
+    }
+    public String getUnidad_carr(){
+        return unidad_carr;
+    }
+    public int getEstudiantes_carr(){
+        return estudiantes_carr;
+    }
 }
