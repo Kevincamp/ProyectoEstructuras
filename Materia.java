@@ -18,7 +18,6 @@ public class Materia {
 	}
 	
 	public Materia get_Materia_By_Codigo(String codigo){
-		//Buscar Materia por Codigo.
 		
 	}
 }

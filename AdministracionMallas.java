@@ -14,35 +14,73 @@ public class AdministracionMallas {
                   while(opcionCarrera !=5)
                   {
                       menuCarrera();
-                      opcionCarrera = in.getInt("Sellecione una opción: ");
+                      opcionCarrera = in.getInt("Selecione una opción: ");
                       switch(opcionCarrera)
                       {
                               
                           case 1:
-                              //Ingresar nueva Carrera
+                              nuevaCarrera();
                               break;
                           case 2:
-                              //Listar todas las Carreras
+                              listarCarreras()
                               break;
                           case 3:
-                              //Buscar Carrera Codigo
+                              buscarCarrera();
                               break;
                           case 4:
-                              //Eliminar Carrera
-                              break
+                              eliminarCarrera()
+                              break;
                     
                       }
                   }
                         break;
-              case 2:   menuMaterias();
+              case 2:
+                  int opcionMateria = 10;
+                  while(opcionMateria != 5)
+                  {
+                      menuMaterias();
+                      opcionMateria = in.getInt("Seleccione una opción");
+                      switch(opcionCarrera)
+                      {
+                          case 1:
+                              nuevaMateria();
+                              break;
+                          case 2:
+                              listarMaterias();
+                              break;
+                          case 3:
+                              buscarMateria();
+                              break;
+                          case 4:
+                              eliminarMateria();
+                              break;
+                      }
+                  }
                         break;
-              case 3:   menuMallas():
+              case 3:
+                  int opcionMalla = 10;
+                  while(opcionMalla != 5)
+                  {
+                      menuMallas();
+                      opcionMalla = in.getInt("Seleccione una opción");
+                      switch(opcionMalla)
+                      {
+                      
+                          case 1:
+                              break;
+                          case 2:
+                              break;
+                          case 3:
+                              break;
+                          case 4:
+                              break;
+                      }
+                  }
                         break;
                 
                   
           }
       }
-	  submenu(menu());
   }
   
   static void menu()
@@ -86,29 +124,91 @@ public class AdministracionMallas {
         System.out.println("5. Atras.\n");
     }
     
-  
-  public static void accion_Carrera(int opcion){
-	  Teclado in = new Teclado();
-	  switch(opcion){
-		  case 1:
-		  System.out.println("************* CARRERA *************\n");
-		  System.out.println("************* INGRESO DE NUEVA CARRERA *************\n");
-		  System.out.println("Ingrese los siguientes datos.\n");
-		  String codigo_carr = in.getString("Código de la carrera: ");
-		  String nombre_carr = in.getString("Nombre de la carrera: ");
-		  String unidad_carr = in.getString("Unidad Academica:  ");
-		  int estudiantes_carr = in.getInt("# de estudiantes: ");
-		  Carrera carrera = new Carrera(codigo_carr, nombre_carr, unidad_carr, estudiantes_carr);
-		  
-		  break;
-		  case 2:
-		  break;
-		  case 3:
-		  break;
-		  case 4:
-		  break;
-		  case 5:
-		  break;
-	  }
-  }
+    /****************************************  REGION CARRERA **********************/
+    
+    public void nuevaCarrera(){
+        
+        Teclado in = new Teclado();
+        System.out.println("************* INGRESO DE NUEVA CARRERA *************\n");
+        System.out.println("Ingrese los siguientes datos.\n");
+        String codigo_carr = in.getString("Código de la carrera: ");
+        String nombre_carr = in.getString("Nombre de la carrera: ");
+        String unidad_carr = in.getString("Unidad Academica:  ");
+        int estudiantes_carr = in.getInt("# de estudiantes: ");
+        Carrera carrera = new Carrera(codigo_carr, nombre_carr, unidad_carr, estudiantes_carr);
+        
+    }
+    
+    public void listarCarreras(){
+    
+    }
+    
+    public void buscarCarrera(){
+        
+        Teclado in = new Teclado();
+        System.out.println("************* BUSCAR CARRERA *************\n");
+        String codigo_carr = in.getString("Ingrese código de la carrera: ");
+        //BuscarCarrera
+    }
+    
+    public void eliminarCarrera(){
+        
+        Teclado in = new Teclado();
+        System.out.println("************* ELIMINAR CARRERA *************\n");
+        String codigo_carr = in.getString("Ingrese código de la carrera: ");
+        //ElimnarCarrera
+    }
+    
+    
+    /****************************************  REGION MATERIA **********************/
+    public void nuevaMateria()
+    {
+        
+        Teclado in = new Teclado();
+        System.out.println("************* INGRESO DE NUEVA MATERIA *************\n");
+        System.out.println("Ingrese los siguientes datos.\n");
+        String codigo_mat = in.getString("Código de la materia: ");
+        String nombre_mat = in.getString("Nombre de la materia: ");
+        String descripción_mat = in.getString("descripción:  ");
+        int credTeo_mat = in.getInt("# Creditos Teoricos: ");
+        int credPrac_mat = in.getInt("# Creditos Practicos: ");
+        
+        Materia m = new Materia(codigo_mat, nombre_mat, descripción_mat, credTeo_mat, credPrac_mat);
+    }
+    
+    public void listarMaterias()
+    {
+    
+    }
+    
+    public void buscarMateria(){
+        
+        Teclado in = new Teclado();
+        System.out.println("************* BUSCAR MATERIA *************\n");
+        String codigo_mat = in.getString("Ingrese código de la materia: ");
+        //BuscarMateria
+    }
+    
+    
+    public void eliminarMateria(){
+        
+        Teclado in = new Teclado();
+        System.out.println("************* ELIMINAR MATERIA *************\n");
+        String codigo_mat = in.getString("Ingrese código de la materia: ");
+        //ElimnarMateria
+    }
+    
+    /****************************************  REGION MALLA **********************/
+    
+    public void nuevaMalla(){
+        Teclado in = new Teclado();
+        System.out.println("************* INGRESO DE NUEVA MALLA *************\n");
+        System.out.println("Ingrese los siguientes datos.\n");
+        String codigo_carr = in.getString("Código de la carrera: ");
+        int ver_mall = in.getInt("Version malla: ");
+        
+        Malla m = new Malla(codigo_carr,ver_mall);
+
+    }
+    
 }
